@@ -1,21 +1,21 @@
 # ===============================================
-# LM Studio - Code Example
+# Text Generation WebUI - Code Example
 # Free LLM API - https://free-llm.com
-# Provider URL: https://lmstudio.ai/
+# Provider URL: https://github.com/oobabooga/text-generation-webui
 # ===============================================
 
 from openai import OpenAI
 
-# LM Studio runs a local OpenAI-compatible server on port 1234
+# Enable OpenAI extension in text-generation-webui
 client = OpenAI(
-    api_key="lm-studio",
-    base_url="http://localhost:1234/v1"
+    api_key="textgen",
+    base_url="http://localhost:5000/v1"
 )
 
 response = client.chat.completions.create(
     model="local-model",
     messages=[
-        {"role": "user", "content": "What can you help me with?"}
+        {"role": "user", "content": "Tell me about text generation"}
     ]
 )
 

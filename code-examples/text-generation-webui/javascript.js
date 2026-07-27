@@ -1,17 +1,17 @@
 // ===============================================
-// GPT4All - Code Example
+// Text Generation WebUI - Code Example
 // Free LLM API - https://free-llm.com
-// Provider URL: https://gpt4all.io/
+// Provider URL: https://github.com/oobabooga/text-generation-webui
 // ===============================================
 
-// GPT4All with server mode enabled
-const response = await fetch('http://localhost:4891/v1/chat/completions', {
+// Enable OpenAI extension first
+const response = await fetch('http://localhost:5000/v1/chat/completions', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
     model: 'local-model',
     messages: [
-      { role: 'user', content: 'Summarize this document for me' }
+      { role: 'user', content: 'Tell me about text generation' }
     ]
   })
 });

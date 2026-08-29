@@ -2,7 +2,7 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
-> ⚠️ **DEAD / discontinued — do not use.** Discontinued 2026-06-07 (rebranded; legacy host unreachable). Leftover snippet kept for reference only.
+> ⚠️ **DEAD / discontinued — do not use.** Rebranded to Synthetic; legacy `glhf.chat` returns Cloudflare 522. Leftover snippet kept for reference only.
 
 ## About
 

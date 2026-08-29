@@ -2,6 +2,8 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
+> 🔑 **Host up but keyed** (401/405, probed 2026-08-29). KUDBEE skipped ($5 deposit). No key claimed. Use `YOUR_API_KEY` only.
+
 ## About
 
 Together AI provides free access (once you add a $5 min deposit) to select research models plus paid access to Llama 4, DeepSeek, and 100+ open models. The platform specializes in high-performance inference and fine-tuning.

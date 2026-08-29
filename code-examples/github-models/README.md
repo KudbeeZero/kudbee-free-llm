@@ -2,7 +2,7 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
-> ⚠️ **DEAD / discontinued — do not use.** GitHub Models has been discontinued. Leftover snippet kept for reference only.
+> ⚠️ **DEAD / discontinued — do not use.** GitHub Models retired 2026-07-30. Leftover snippet kept for reference only.
 
 ## About
 

@@ -2,11 +2,11 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
-> 🔓 **No-key probe OK.** `GET /v1/models` is public. Chat works without a key at a base rate. Repo model `deepseek-r1` is stale — use `deepseek-v4-flash`.
+> 🔓 **Catalog is public. Chat is not no-key.** `GET /v1/models` → 200 (~43 models, includes `deepseek-v4-flash`). `POST /v1/chat/completions` → 401 Missing API key. Replace `YOUR_API_KEY` with a token from [llm7.io](https://llm7.io). Do not invent or commit a token. `deepseek-r1` is stale.
 
 ## About
 
-Zero-friction free LLM API — usable with no signup at all at a base rate, or get a free email-based token for a much higher limit. OpenAI-compatible endpoint. Prefer `deepseek-v4-flash` (`deepseek-r1` is no longer on the live models list).
+OpenAI-compatible endpoint. The models catalog is public; chat now requires a token (probed 2026-08-29). Prefer `deepseek-v4-flash` (`deepseek-r1` is no longer on the live models list).
 
 **Official Website:** [https://llm7.io](https://llm7.io)
 

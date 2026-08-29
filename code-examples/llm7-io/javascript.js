@@ -7,7 +7,7 @@
 import OpenAI from 'openai';
 
 const client = new OpenAI({
-  apiKey: 'YOUR_LLM7_TOKEN_OR_unused',
+  apiKey: 'YOUR_API_KEY',
   baseURL: 'https://api.llm7.io/v1'
 });
 

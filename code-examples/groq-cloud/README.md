@@ -2,7 +2,7 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
-> ⏭️ **KUDBEE SKIP.** Still listed upstream. Login unfinished — do not add a Groq key. Snippets kept for reference only.
+> ⏭️ **KUDBEE SKIP.** Still listed upstream. Host up but keyed (401). Login unfinished — do not add a Groq key. Snippets kept for reference only.
 
 ## About
 

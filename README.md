@@ -86,26 +86,38 @@ Every other provider has a ready-to-copy snippet in [`code-examples/`](code-exam
 
 ## KUDBEE status — live vs dead vs skipped
 
-Checked **2026-08-29**. This fork does not claim providers that need phone, card, or Google login. Quotas below are only what Research Bot already verified or what public docs still advertise — **do not invent new numbers**.
+Checked **2026-08-29 ~9:55 CT** (Research Bot public probes). This fork does not claim providers that need phone, card, or Google login. Quotas below are only what was already verified or what public docs still advertise — **do not invent new numbers**. No secrets in this repo.
 
-### ✅ Live / claimed
-
-| Provider | Notes |
-|:---|:---|
-| [Inception Labs](https://platform.inceptionlabs.ai) | 100M tokens per new account, no card. Quota is **per account, not per API key**. Models: `mercury-2`, `mercury-edit-2`. Base: `https://api.inceptionlabs.ai/v1`. Snippets use `YOUR_API_KEY` only. |
-
-### 🔓 No-key probe OK
+### ✅ Live / claimed-offer
 
 | Provider | Notes |
 |:---|:---|
-| [LLM7.io](https://llm7.io) | Live models list (no key). Repo model `deepseek-r1` is **stale** — prefer `deepseek-v4-flash`. |
-| [Pollinations.ai](https://pollinations.ai) | `GET https://text.pollinations.ai/...` works with no key. |
+| [Inception Labs](https://platform.inceptionlabs.ai) | 100M tokens per new account, no card. Quota is **per account, not per API key**. Models: `mercury-2`, `mercury-edit-2`. Base: `https://api.inceptionlabs.ai/v1`. Docs use `YOUR_API_KEY` only — no extra grants. Public `GET /v1/models` → 200 (includes `mercury-2`). Chat still needs a key. |
+
+### 🔓 Live no-key (public GET only)
+
+| Provider | Probe (2026-08-29) | Chat |
+|:---|:---|:---|
+| [Pollinations.ai](https://pollinations.ai) | `GET https://text.pollinations.ai/hello` → 200 | No key needed for this GET |
+| [Inception Labs](https://platform.inceptionlabs.ai) | `GET https://api.inceptionlabs.ai/v1/models` → 200 (includes `mercury-2`) | Chat needs `YOUR_API_KEY` |
+| [OpenRouter](https://openrouter.ai/) | `GET https://openrouter.ai/api/v1/models` → 200 public catalog | Chat needs a key (not claimed) |
+| [LLM7.io](https://llm7.io) | `GET https://api.llm7.io/v1/models` → 200 (~43 models, includes `deepseek-v4-flash`) | **Chat POST is not no-key** — 401 Missing API key. Catalog public; chat needs a token. Do not invent one. |
+
+### 🔑 Host up but keyed
+
+Public probe returned 401/405. Host is live. **Do not claim we have keys.**
+
+| Provider | Probe | KUDBEE |
+|:---|:---|:---|
+| [Groq](https://console.groq.com/) | Host up, keyed (401) | **Skipped** (ZERO). Do not add a Groq key. |
+| [Together.AI](https://together.ai/) | Host up, keyed (401/405) | Skipped ($5 deposit). No key claimed. |
+| [Fireworks AI](https://fireworks.ai/) | Host up, keyed (401/405) | Pending / live-docs. No key claimed. |
 
 ### 📄 Pending / live-docs
 
 Still advertised free or trial in public docs; API hosts resolve. **Not claimed by KUDBEE.** Leave quotas as listed upstream — do not invent replacements.
 
-Hugging Face Inference · Cohere · Z.AI (GLM) · Coze · Cloudflare Workers AI · OVH AI Endpoints · Ollama Cloud · Nous Portal · Hetzner Inference API · Aion Labs · Inference.net · OpenRouter · Venice.ai · Requesty · Grok (xAI) · Replicate · Fireworks AI · SambaNova Cloud · Hyperbolic · Novita AI · Scaleway Generative APIs · Qwen (Alibaba) · AI21 Labs · Upstage · DeepSeek · DeepInfra · Friendli AI · Nscale
+Hugging Face Inference · Cohere · Z.AI (GLM) · Coze · Cloudflare Workers AI · OVH AI Endpoints · Ollama Cloud · Nous Portal · Hetzner Inference API · Aion Labs · Inference.net · Venice.ai · Requesty · Grok (xAI) · Replicate · SambaNova Cloud · Hyperbolic · Novita AI · Scaleway Generative APIs · Qwen (Alibaba) · AI21 Labs · Upstage · DeepSeek · DeepInfra · Friendli AI · Nscale
 
 ### 🚫 Blocked for KUDBEE
 
@@ -136,12 +148,12 @@ Do not use. Leftover snippets stay for reference only.
 <!--TABLE:DEAD:START-->
 | Provider | Why | Snippets |
 |:---|:---|:---|
-| [Chutes.ai](https://chutes.ai/) | No longer free | [`chutes-ai`](code-examples/chutes-ai) |
-| [GitHub Models](https://github.com/marketplace/models) | Discontinued | [`github-models`](code-examples/github-models) |
-| [Glhf.chat](https://glhf.chat/) | Discontinued 2026-06-07 | [`glhf-chat`](code-examples/glhf-chat) |
-| [Kluster.ai](https://kluster.ai/) | Discontinued | [`kluster-ai`](code-examples/kluster-ai) |
+| [Chutes.ai](https://chutes.ai/) | Free perk retired 2026-03-15 | [`chutes-ai`](code-examples/chutes-ai) |
+| [GitHub Models](https://github.com/marketplace/models) | Retired 2026-07-30 | [`github-models`](code-examples/github-models) |
+| [Glhf.chat](https://glhf.chat/) | Rebranded to Synthetic; legacy host Cloudflare 522 | [`glhf-chat`](code-examples/glhf-chat) |
+| [Kluster.ai](https://kluster.ai/) | EOL 2026-06-09 | [`kluster-ai`](code-examples/kluster-ai) |
 | [Lepton AI](https://www.lepton.ai/) | Acquired by NVIDIA | [`lepton-ai`](code-examples/lepton-ai) |
-| [Yi AI (01.AI)](https://www.01.ai/) | `api.01.ai` is dead (DNS does not resolve) | [`yi-ai`](code-examples/yi-ai) |
+| [Yi AI (01.AI)](https://www.01.ai/) | `api.01.ai` dead; 01.AI API shutdown | [`yi-ai`](code-examples/yi-ai) |
 <!--TABLE:DEAD:END-->
 
 ---
@@ -166,7 +178,7 @@ Ongoing free access with rate-limited quotas that never expire.
 | [Z.AI (GLM)](https://z.ai/) | Registration | ~1 request/second (Flash models) | ~1,000 requests/day (Flash tier) | Free tier ongoing, subject to change | GLM-4.5-Flash, GLM-4.7-Flash |
 | [Coze](https://www.coze.com/) | Registration | Varies by model | Token-based daily limits | Resets daily | GPT-4o (via Coze), Gemini 1.5 Pro (via Coze) |
 | [Cloudflare Workers AI](https://dash.cloudflare.com/) | No | Varies by model | 10,000 neurons/day | ~300,000 neurons/month | Llama 3.1 8B Instruct, Llama 3.2 3B Instruct, Mistral 7B Instruct v0.2, Qwen 1.5 7B Chat |
-| [LLM7.io](https://llm7.io) 🔓 *no-key probe OK* | No | 30 RPM (no signup) / 120 RPM (free email token) | Up to 5M tokens/day (rolling 24h, with free token) | Free, no billing | deepseek-v4-flash (`deepseek-r1` is stale) |
+| [LLM7.io](https://llm7.io) 🔓 *catalog public; chat needs token* | No | 30 RPM (no signup) / 120 RPM (free email token) | Up to 5M tokens/day (rolling 24h, with free token) | Free, no billing | deepseek-v4-flash (`deepseek-r1` is stale) |
 | [OVH AI Endpoints](https://endpoints.ai.cloud.ovh.net/) | Registration | 2 RPM (Anonymous) / 400 RPM (Auth) | Unspecified | Beta Access | Qwen3Guard-Gen-0.6B (Beta), Qwen3Guard-Gen-8B (Beta), stable-diffusion-xl-base-v10, nvr-tts-es-es |
 | [Ollama Cloud](https://ollama.com/cloud) | No | Light usage tier, 1 concurrent model | Session limit resets every few hours | Weekly usage limit resets every 7 days | GPT-OSS 120B (Cloud), GPT-OSS 20B (Cloud), Qwen3.5 (Cloud), DeepSeek V4 Flash (Cloud) |
 | [Nous Portal](https://portal.nousresearch.com) | No | Not fully published — verify on portal.nousresearch.com | Not published | Free tier: $0/month, no credit card | Hermes 4 |
@@ -176,7 +188,7 @@ Ongoing free access with rate-limited quotas that never expire.
 | [ModelScope](https://modelscope.cn) 🚫 *KUDBEE blocked — phone / real-name* | Phone verification | 500 requests/day per model | 2,000 requests/day total | Free, no billing | See provider |
 | [Aion Labs](https://www.aionlabs.ai/pricing/) | No | Not published — verify on aionlabs.ai/pricing | Daily token allowance (exact quota undisclosed) | Free, no billing | See provider |
 | [Inference.net](https://inference.net/) | No | 30 RPM (fair use) | Fair use policy | Fair use policy | DeepSeek-R1, Llama 3.1 8B Instruct, Llama 3.1 70B Instruct |
-| [Inception Labs](https://platform.inceptionlabs.ai) ✅ *KUDBEE claimed* | No | 100M tokens per new account | 100M tokens per new account | 100M tokens per new account (per account, not per key) | mercury-2, mercury-edit-2 |
+| [Inception Labs](https://platform.inceptionlabs.ai) ✅ *KUDBEE claimed-offer — YOUR_API_KEY only* | No | 100M tokens per new account | 100M tokens per new account | 100M tokens per new account (per account, not per key) | mercury-2, mercury-edit-2 |
 <!--TABLE:PERMANENT:END-->
 
 ### 💰 Renewable Credits
@@ -186,7 +198,7 @@ Free access that renews periodically, no one-time expiry.
 <!--TABLE:RENEWABLE:START-->
 | Provider | Credit Card? | Rate Limit | Free Offer | Key Models |
 |:---|:---:|:---|:---|:---|
-| [OpenRouter](https://openrouter.ai/) | No | 20 requests/minute | 50 requests/day (up to 1000 with $10 topup) | Google: Gemini 2.0 Flash (free), Google: Gemini 2.0 Pro (free), Meta: Llama 3.3 70B Instruct (free), NVIDIA: Llama 3.1 Nemotron 70B (free) |
+| [OpenRouter](https://openrouter.ai/) 🔓 *catalog public; chat keyed* | No | 20 requests/minute | 50 requests/day (up to 1000 with $10 topup) | Google: Gemini 2.0 Flash (free), Google: Gemini 2.0 Pro (free), Meta: Llama 3.3 70B Instruct (free), NVIDIA: Llama 3.1 Nemotron 70B (free) |
 | [Venice.ai](https://venice.ai/) | Registration | 10 RPM (free tier) | Limited daily usage | Llama 3.1 405B, Dolphin Mixtral, Stable Diffusion 3 |
 | [Requesty](https://requesty.ai/) | No | 60 RPM | 200 requests/day (free models) | See provider |
 | [Grok (xAI)](https://console.x.ai/) | Registration | Varies (low for free tier) | $25 one-time signup credit | Grok-2, Grok-2 Mini, Grok-2 Vision |
@@ -199,9 +211,9 @@ Sign up and receive credits to use until depleted.
 <!--TABLE:TRIAL:START-->
 | Provider | Credit Card? | Credit Amount | Expiry | Key Models |
 |:---|:---:|:---|:---|:---|
-| [Together.AI](https://together.ai/) ⏭️ *KUDBEE skipped — research models need a $5 deposit* | Registration | — | — | PrismML Ternary Bonsai 27B (Free) |
+| [Together.AI](https://together.ai/) ⏭️ *KUDBEE skipped — $5 deposit; host up but keyed* | Registration | — | — | PrismML Ternary Bonsai 27B (Free) |
 | [Replicate](https://replicate.com/) | Registration | Small trial credit | One-time | See provider |
-| [Fireworks AI](https://fireworks.ai/) | Registration | $1 | One-time | See provider |
+| [Fireworks AI](https://fireworks.ai/) 🔑 *host up but keyed — no key claimed* | Registration | $1 | One-time | See provider |
 | [SambaNova Cloud](https://cloud.sambanova.ai/) | Registration | $5 | 3 months | See provider |
 | [Hyperbolic](https://app.hyperbolic.xyz/) | Registration | $1 | One-time | See provider |
 | [Nebius (Token Factory)](https://tokenfactory.nebius.com/) 🚫 *KUDBEE blocked — card on file* | Registration | $1 (requires a bank card on file) | One-time | See provider |

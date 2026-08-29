@@ -2,7 +2,7 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
-> ⚠️ **DEAD / discontinued — do not use.** No longer free. Leftover snippet kept for reference only.
+> ⚠️ **DEAD / discontinued — do not use.** Free perk retired 2026-03-15. Leftover snippet kept for reference only.
 
 ## About
 

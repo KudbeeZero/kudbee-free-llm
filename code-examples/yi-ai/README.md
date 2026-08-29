@@ -2,7 +2,7 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
-> ⚠️ **DEAD / discontinued — do not use.** `api.01.ai` is dead (DNS does not resolve). Leftover snippet kept for reference only.
+> ⚠️ **DEAD / discontinued — do not use.** `api.01.ai` is dead; 01.AI API shutdown. Leftover snippet kept for reference only.
 
 ## About
 

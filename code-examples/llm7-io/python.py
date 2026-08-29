@@ -7,7 +7,7 @@
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="YOUR_LLM7_TOKEN_OR_unused",
+    api_key="YOUR_API_KEY",
     base_url="https://api.llm7.io/v1"
 )
 

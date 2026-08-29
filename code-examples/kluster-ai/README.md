@@ -2,7 +2,7 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
-> ⚠️ **Discontinued** — this provider has shut down or is no longer operating. These examples are kept for reference only.
+> ⚠️ **DEAD / discontinued — do not use.** kluster.ai discontinued its API. Leftover snippet kept for reference only.
 
 ## About
 

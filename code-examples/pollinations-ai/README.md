@@ -2,6 +2,8 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
+> 🔓 **No-key probe OK.** `GET https://text.pollinations.ai/...` works with no API key.
+
 ## About
 
 The most zero-friction free AI API around — no API key and no signup needed at all for basic text generation, via a simple GET-request URL scheme. Supports Claude, GPT, Gemini, DeepSeek, Llama and Mistral-class text models, plus image and audio generation. A free API key raises the rate limits further.

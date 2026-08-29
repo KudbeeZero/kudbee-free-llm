@@ -2,9 +2,11 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
+> 🔓 **No-key probe OK.** `GET /v1/models` is public. Chat works without a key at a base rate. Repo model `deepseek-r1` is stale — use `deepseek-v4-flash`.
+
 ## About
 
-Zero-friction free LLM API — usable with no signup at all at a base rate, or get a free email-based token for a much higher limit. OpenAI-compatible endpoint with a wide model selection including DeepSeek-R1, Qwen, and Llama.
+Zero-friction free LLM API — usable with no signup at all at a base rate, or get a free email-based token for a much higher limit. OpenAI-compatible endpoint. Prefer `deepseek-v4-flash` (`deepseek-r1` is no longer on the live models list).
 
 **Official Website:** [https://llm7.io](https://llm7.io)
 

@@ -12,7 +12,7 @@ const client = new OpenAI({
 });
 
 const response = await client.chat.completions.create({
-  model: 'deepseek-r1',
+  model: 'deepseek-v4-flash',
   messages: [{ role: 'user', content: 'Hello!' }]
 });
 

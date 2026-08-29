@@ -7,7 +7,7 @@
 curl https://api.llm7.io/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "deepseek-r1",
+    "model": "deepseek-v4-flash",
     "messages": [
       {"role": "user", "content": "Hello!"}
     ]

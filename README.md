@@ -156,6 +156,22 @@ Do not use. Leftover snippets stay for reference only.
 | [Yi AI (01.AI)](https://www.01.ai/) | `api.01.ai` dead; 01.AI API shutdown | [`yi-ai`](code-examples/yi-ai) |
 <!--TABLE:DEAD:END-->
 
+### 🖥️ Local / self-hosted tools (docs check 2026-08-29)
+
+Public sites and GitHub READMEs only. **No model downloads, no GPU, no inference.** Shared leftover: every local snippet README still says “Get your free API key” — that template is wrong for localhost servers (no cloud key). Base URLs below are what this repo’s snippets use.
+
+| Tool | Verdict | Official home | Repo snippet | Notes |
+|:---|:---|:---|:---|:---|
+| [Ollama](https://ollama.com/) | Accurate | [ollama.com](https://ollama.com/) | `http://localhost:11434/v1` | Official OpenAI-compat docs still use this host/port. |
+| [LM Studio](https://lmstudio.ai/) | Accurate | [lmstudio.ai](https://lmstudio.ai/) | `http://localhost:1234/v1` | Official developer docs still default to port 1234. Product also ships “Bionic”; local server remains. |
+| [llama.cpp](https://github.com/ggml-org/llama.cpp) | Stale command | [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) | `http://localhost:8080/v1` | Repo URL is current (ggml-org). Snippet comment `./server -m model.gguf` is stale — official binary is `llama-server`. |
+| [GPT4All](https://gpt4all.io/) | Accurate | [gpt4all.io](https://gpt4all.io/) → [nomic.ai/gpt4all](https://www.nomic.ai/gpt4all) | `http://localhost:4891/v1` | Official API docs still use port 4891. Landing URL redirects to Nomic. |
+| [Jan.ai](https://jan.ai/) | Accurate | [jan.ai](https://jan.ai/) | `http://localhost:1337/v1` | Official Local API Server docs still bind `127.0.0.1:1337`. |
+| [KoboldCpp](https://github.com/LostRuins/koboldcpp) | Accurate | [LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) | `http://localhost:5001/api/v1/generate` | Default port 5001 and `/api/v1/generate` still documented. Also exposes `/v1` OpenAI-compat. |
+| [llamafile](https://github.com/Mozilla-Ocho/llamafile) | Stale URL | **Moved** to [mozilla-ai/llamafile](https://github.com/mozilla-ai/llamafile) | `http://localhost:8080/v1` | Mozilla-Ocho URL redirects. Project adopted by mozilla.ai. Old GitHub org link in this repo is stale. |
+| [Text Generation WebUI](https://github.com/oobabooga/text-generation-webui) | Stale name / docs | **Renamed** [oobabooga/textgen](https://github.com/oobabooga/textgen) (TextGen) | `http://localhost:5000/v1` | Old Gradio repo redirects. Now a desktop app with a built-in OpenAI/Anthropic API. “Enable OpenAI extension” + port 5000 is leftover. |
+| [BentoML](https://www.bentoml.com/) | Accurate | [bentoml.com](https://www.bentoml.com/) | deploy snippet (`bentoml.service`) | Still an inference/deploy platform, not a one-click local chat GUI. |
+
 ---
 
 ## Provider Directory

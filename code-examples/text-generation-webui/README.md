@@ -2,6 +2,8 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
+> ⚠️ **KUDBEE stale (2026-08-29).** Project renamed to **TextGen** ([oobabooga/textgen](https://github.com/oobabooga/textgen)). “Enable OpenAI extension” / Gradio / port 5000 leftover. Docs check only — no inference run.
+
 ## About
 
 The Swiss Army Knife of local LLMs. Highly customizable Gradio interface for running Large Language Models like Llama, GPT-J, OPT, and GALACTICA locally.

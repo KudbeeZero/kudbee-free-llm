@@ -2,6 +2,8 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
+> ⚠️ **KUDBEE stale (2026-08-29).** Repo moved: `Mozilla-Ocho/llamafile` → [mozilla-ai/llamafile](https://github.com/mozilla-ai/llamafile). Docs check only — no inference run.
+
 ## About
 
 Distribute and run LLMs with a single file. Llamafile combines llama.cpp with Cosmopolitan Libc to create multi-platform executables that run anywhere.

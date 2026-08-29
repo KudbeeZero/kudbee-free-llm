@@ -2,6 +2,8 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
+> 🔑 **Host up but keyed** (401/405, probed 2026-08-29). No key claimed. Use `YOUR_API_KEY` only.
+
 ## About
 
 The fastest production platform for Generative AI. Run open-source models with blazing speed and efficiency. Specialized in fire-function calling and JSON mode.

@@ -1,20 +1,20 @@
 # ===============================================
-# LLM7.io - Code Example
+# Inception Labs - Code Example
 # Free LLM API - https://free-llm.com
-# Provider URL: https://llm7.io
+# Provider URL: https://platform.inceptionlabs.ai
 # ===============================================
 
 from openai import OpenAI
 
 client = OpenAI(
     api_key="YOUR_API_KEY",
-    base_url="https://api.llm7.io/v1"
+    base_url="https://api.inceptionlabs.ai/v1"
 )
 
 response = client.chat.completions.create(
-    model="deepseek-v4-flash",
+    model="mercury-2",
     messages=[
-        {"role": "user", "content": "Hello!"}
+        {"role": "user", "content": "What is a diffusion model?"}
     ]
 )
 

@@ -2,9 +2,11 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
+> ⚠️ **DEAD / discontinued — do not use.** `api.01.ai` is dead; 01.AI API shutdown. Leftover snippet kept for reference only.
+
 ## About
 
-STATUS UNCONFIRMED: As of July 2026 the api.01.ai endpoint no longer resolves; 01.AI appears to have moved to a China-focused platform (platform.lingyiwanwu.com) with unclear international signup availability. Kept here for reference pending confirmation. Original listing: 01.AI flagship open-source models. Yi-Large provides GPT-4 class performance with strong reasoning capabilities and a 200k context window.
+DEAD: `api.01.ai` no longer resolves. 01.AI appears to have moved to a China-focused platform (platform.lingyiwanwu.com). Original listing: 01.AI flagship open-source models. Yi-Large provides GPT-4 class performance with strong reasoning capabilities and a 200k context window.
 
 **Official Website:** [https://www.01.ai/](https://www.01.ai/)
 

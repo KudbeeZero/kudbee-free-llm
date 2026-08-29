@@ -2,6 +2,8 @@
 
 > Part of **[Free-LLM](https://free-llm.com)** — Open Directory of Free AI & LLM APIs
 
+> ⚠️ **KUDBEE stale (2026-08-29).** Official binary is `llama-server`, not `./server`. Repo `ggml-org/llama.cpp` and `http://localhost:8080/v1` are still current. Docs check only — no inference run.
+
 ## About
 
 Port of Facebook's LLaMA model in C/C++. The foundational project that enables running LLMs on consumer hardware (Mac, Windows, Linux, Android) with high performance.
